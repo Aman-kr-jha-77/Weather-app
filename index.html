@@ -95,7 +95,58 @@
                             </div>
                             <div class="icon" ><i class="bi bi-thermometer-half"></i></div>
                         </div>
+
+
                     </div>
+
+                </div>
+                <div class="row" style="display: none;">
+                    <div class="tittle" style="color:#fff;text-align: left;padding: 15px 0 5px;">Sunrise & sunset</div>
+                    <div class="sun" style="width: 100%;border-radius: 20px;padding: 15px 10px 5px;display: flex;align-items: center;justify-content: space-between;">
+
+
+                        <div class="sunsetSunrise" style="display: flex;flex-direction: column;justify-content: space-evenly;width:30%;" >
+                            <div class="sunrise" style="padding: 10px 0;">
+                                <p>sunrise</p>
+                                <p id="sunrise" class="infoCont"></p>
+                            </div>
+                            <div class="sunset" style="padding: 10px 0;">
+                                <p>sunset</p>
+                                <p id="sunset" class="infoCont" ></p>
+                            </div>
+                        </div>
+
+
+                      <div class="map" style="width: 60%;">
+                        <div class="sunboxContainer"
+                        style="display: flex;justify-content: center;gap: 0px;position: relative;">
+
+                        <div class="sunbox"
+                            style="border: 2px solid #757575;border-radius: 0 0 100px 0;align-self:self-end;">
+                        </div>
+                        <div class="sunboxmain" id="mainSunBox"
+                            style="border-radius:100px 100px 0 0;display: flex;justify-content: center;flex-direction: column;align-items: center;border: 2px solid #757575;">
+                            <div class="sunAxis" id="sunAxis" style="position: absolute;">
+                                <div class="sunball"
+                                    style="height: 10px;width: 10px;border-radius: 50%;position: relative;z-index: 2;">
+                                </div>
+                                 <div class="sunbar"
+                                    style="border-radius: 20px;position:absolute;width: 10px;">
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="sunbox"
+                            style="border-radius:0 0 0 100px;align-self: self-end;border: 2px solid #757575;">
+                        </div>
+                    </div>
+                  
+                    </div>
+
+                      </div>
+
+                    </div>
+
                 </div>
             </div>
 
@@ -104,6 +155,5 @@
     </div>
     <script src="script.js"></script>
 </body>
-
 
 </html>
