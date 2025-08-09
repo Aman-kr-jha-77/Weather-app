@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="card" id="card">
+        <div class="search">
+            <div class="inputSearch" style="display: flex;">
+                <button style="border-radius: 0;border-top-left-radius: 20px;border-bottom-left-radius: 20px;"
+                    id="loc"><i class="bi bi-geo-alt"></i></button>
+                <input type="text" placeholder="enter city name" id="city">
+                <button id="search"><i class="bi bi-search"></i></button>
+            </div>
+            <button id="theme" onclick="changeTheme()">
+                <div class="ball" id="ball">
+                    <i class="bi bi-sun-fill"></i>
+                    <i class="bi bi-moon-fill"></i>
+                </div>
+            </button>
+            <!-- <button id="autolocate"><i class="bi bi-crosshair"></i></button> -->
+        </div>
+        <!-- hero -->
+        <div class="weather" style="text-align: center; width: 100%;">
+            <div class="now"
+                style="display: flex;align-items:end;justify-content: space-between;padding: 15px 0;">
+
+                <div class="section">
+                    <div class="condition-now" style="text-align: left;">Now</div>
+                    <div class="hero"
+                        style="display: flex;padding: 0 5px;align-items: end;">
+                        <div class="temp" id="temp" style="font-weight: lighter;">
+                        </div>
+                        <div class="icon" id="icon"><i id="weatherIcon" class="bi" style="font-size: 50px;"></i></div>
+                    </div>
+                    <div class="feels" style="font-weight: normal;text-align: left;">
+                    </div>
+
+
+                </div>
+                <div class="disciptionsection" style="text-align: right;">
+                    <div class="overAll" style="padding: 10px 0;"></div>
+                    <div class="discription" style="display: flex;align-items: center;font-weight: normal;"> 
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- <h2 class="city" id="cityName" style="margin-bottom: 25px;"></h2> -->
+            <!--  -->
+            <div class="row-container">
+                <div class="tittle" style="color:#fff;text-align: left;padding: 15px 0 5px;">Current condition</div>
+                <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+                    
+                    <div class="col">
+                        <p>Wind</p>
+                        <div class="infoBox" style="display: flex;align-items: center;justify-content: space-between;">
+                            <div class="info"
+                                style="text-align: center; line-height: 1.5; display: flex;align-items: baseline;">
+                                <p class="infoCont" id="speed"></p>
+                                <p>km/h</p>
+                            </div>
+                            <div class="icon" ><i class="bi bi-wind"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <p>Humidity</p>
+                        <div class="infoBox" style="display: flex;align-items: center;justify-content: space-between;">
+                            <div class="info"
+                                style="text-align: center; line-height: 1.5; display: flex;align-items: baseline;">
+                                <p class="infoCont" id="humidity" ></p>
+                                <p>%</p>
+                            </div>
+                            <div class="icon" ><i class="bi bi-droplet"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="col">
+                        <p>Pressure</p>
+                        <div class="infoBox" style="display: flex;align-items: center;justify-content: space-between;">
+                            <div class="info"
+                                style="text-align: center; line-height: 1.5; display: flex;align-items: baseline;">
+                                <p class="infoCont" id="Pressure" ></p>
+                                <p>mBar</p>
+                            </div>
+                            <div class="icon" ><i class="bi bi-thermometer-half"></i></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="tittle" style="color:#fff;text-align: left;padding: 15px 0 5px;">Sunrise & sunset</div>
+                    <div class="sun" style="width: 100%;border-radius: 20px;padding: 15px 10px 5px;display: flex;align-items: center;justify-content: space-between;">
+
+
+                        <div class="sunsetSunrise" style="display: flex;flex-direction: column;justify-content: space-evenly;width:30%;" >
+                            <div class="sunrise" style="padding: 10px 0;">
+                                <p>sunrise</p>
+                                <p id="sunrise" class="infoCont"></p>
+                            </div>
+                            <div class="sunset" style="padding: 10px 0;">
+                                <p>sunset</p>
+                                <p id="sunset" class="infoCont" ></p>
+                            </div>
+                        </div>
+
+
+                      <div class="map" style="width: 60%;">
+                        <div class="sunboxContainer"
+                        style="display: flex;justify-content: center;gap: 0px;position: relative;">
+
+                        <div class="sunbox"
+                            style="border: 2px solid #757575;border-radius: 0 0 100px 0;align-self:self-end;">
+                        </div>
+                        <div class="sunboxmain" id="mainSunBox"
+                            style="border-radius:100px 100px 0 0;display: flex;justify-content: center;flex-direction: column;align-items: center;border: 2px solid #757575;">
+                            <div class="sunAxis" id="sunAxis" style="position: absolute;">
+                                <div class="sunball"
+                                    style="height: 10px;width: 10px;border-radius: 50%;position: relative;z-index: 2;">
+                                </div>
+                                 <div class="sunbar"
+                                    style="border-radius: 20px;position:absolute;width: 10px;">
+                                </div> 
+                            </div>
+                        </div>
+
+
+                        <div class="sunbox"
+                            style="border-radius:0 0 0 100px;align-self: self-end;border: 2px solid #757575;">
+                        </div>
+                    </div>
+                  
+
+                       
+
+
+                       
+
+                    </div>
+
+                      </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

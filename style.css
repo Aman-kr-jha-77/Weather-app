@@ -1,0 +1,205 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+
+}
+
+body {font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+#card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    background: linear-gradient(150deg, #200b6d, #0da5d3);
+    color: #fff;
+    border-radius: 20px 20px;
+    padding: 20px 20px;
+}
+
+.inputSearch {
+width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 5px;
+    height: 35px;
+    width: 95%;
+   
+}
+
+.search button {
+    border: 0;
+    background-color: #fff;
+    padding: 10px auto;
+    width: 35px;
+    height: 35px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #757575;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+p {
+    text-align: left;
+    color: #757575;
+}
+
+.col {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px 20px;
+    color: #757575;
+    padding-top: 15px;
+    min-width: 105px;
+    width: 49%;
+}
+
+
+#theme {
+    width: 70px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+
+.ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a3c8d;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 2px;
+   
+    transition: 0.5s ease;
+    font-size: 18px;
+}
+
+.active {
+   
+    background-color: white;
+    color: black;
+}
+.section{width: 50%;}
+@media only screen and (min-width:320px) {
+.active{ transform: translateX(26px);}
+.icon{font-size: 25px;}
+.infoCont{font-size: 25px;}
+p{font-size: 10px;}
+.tittle{font-size: 12px;}
+.condition-now{font-size: 12px;}
+.search input{font-size: 12px;}
+.sunboxContainer{width: 136px;height: 68px;}
+.sunbox{width: 34px;height: 34px;}
+.sunboxmain{height: 34px;width: 68px;}
+.sunAxis{top: 28px;}
+.sunbar{height: 68px;top: -29px;}
+.sunball{top: -33px;}
+}
+@media only screen and (min-width:375px) {
+.active{ transform: translateX(27px);}
+.icon{font-size: 30px;}
+.infoCont{font-size: 30px;}
+p{font-size: 12px;}
+.tittle{font-size: 15px;}
+.condition-now{font-size: 15px;}
+.search input{font-size: 15px;}
+.sunboxContainer{width: 156px;height: 78px;}
+.sunbox{width: 39px;height:39px;}
+.sunboxmain{height: 39px;width: 78px;}
+.sunAxis{top: 33px;}
+.sunbar{height: 78px;top: -34px;}
+.sunball{top: -39px;}
+}
+@media only screen and (min-width:425px) {
+.active{ transform: translateX(30px);}
+.icon{font-size: 40px;}
+.infoCont{font-size: 35px;}
+p{font-size: 12px;}
+.tittle{font-size: 15px;}
+.condition-now{font-size: 15px;}
+.search input{font-size: 15px;}
+.sunboxContainer{width: 200px;height: 100px;}
+.sunbox{width: 50px;height: 50px;}
+.sunboxmain{height: 50px;width: 100px;}
+.sunAxis{top: 45px;}
+.sunbar{height: 100px;top:-50px;}
+.sunball{top: -50px;}
+}
+@media only screen and (min-width:768px) {
+.active{ transform: translateX(30px);}
+.icon{font-size: 45px;}
+.infoCont{font-size: 40px;}
+p{font-size: 15px;}
+.tittle{font-size: 18px;}
+.condition-now{font-size: 18px;}
+.search input{font-size: 18px;}
+.sunboxContainer{width: 200px;height: 100px;}
+.sunbox{width: 50px;height: 50px;}
+.sunboxmain{height: 50px;width: 100px;}
+.sunAxis{top: 45px;}
+.sunbar{height: 100px;top:-50px;}
+.sunball{top: -50px;}
+}
+@media only screen and (min-width:1024px) {
+.active{ transform: translateX(30px);}
+.icon{font-size: 45px;}
+.infoCont{font-size: 40px;}
+p{font-size: 15px;}
+.tittle{font-size: 18px;}
+.condition-now{font-size: 18px;}
+.search input{font-size: 18px;}
+.sunboxContainer{width: 200px;height: 100px;}
+.sunbox{width: 50px;height: 50px;}
+.sunboxmain{height: 50px;width: 100px;}
+.sunAxis{top: 45px;}
+.sunbar{height: 100px;top:-50px;}
+.sunball{top: -50px;}
+}
+
+.bi-sun-fill {
+    display: none;
+}
+.row-container{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+.temp{text-align: left;
+    font-size: 60px;
+}
